@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DACC5C42-4F66-42B9-AB8F-10D8EED38DB6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BannerSolution</RootNamespace>
+    <AssemblyName>BannerSolution</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BB1F664B-9266-4fd6-B973-E1E44974B511};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint">
+      <HintPath>..\Microsoft.SharePoint.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\Constant.cs" />
+    <Compile Include="ControlTemplates\BannerSolution\MessageControl.ascx.cs">
+      <DependentUpon>MessageControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlTemplates\BannerSolution\MessageControl.ascx.designer.cs">
+      <DependentUpon>MessageControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\BannerSolutionFeature\BannerSolutionFeature.EventReceiver.cs">
+      <DependentUpon>BannerSolutionFeature.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Logger.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ControlTemplates\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{fee20375-9787-4807-8b09-914de34dc416}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\BannerSolutionFeature\BannerSolutionFeature.feature">
+      <FeatureId>{b04af89f-0252-431e-8cdc-f30365f9431e}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d156598e-cf53-450b-b4cb-3cc5c93aa33d}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\Banner Assignment List\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5feaa2ee-496c-4874-82b1-9f942c8ada60}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\Banner Description List\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{891dd3d9-f204-4ba3-94a3-269c519452cc}</SharePointProjectItemId>
+    </None>
+    <None Include="MessageControl\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a09162f9-eb48-4202-b2ec-a7f6dc7bf7ba}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{17f48380-c12f-4ac2-a9a8-82a399f75434}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="SiteColumns\Columns\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{25213970-3c48-473f-a449-6eba0e3870e9}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="ControlTemplates\BannerSolution\MessageControl.ascx" />
+    <Content Include="Features\BannerSolutionFeature\BannerSolutionFeature.Template.xml">
+      <DependentUpon>BannerSolutionFeature.feature</DependentUpon>
+    </Content>
+    <Content Include="Layouts\BannerSolution\JavaScript\jquery-3.3.1.min.js" />
+    <Content Include="Layouts\BannerSolution\SiteConfig.xml" />
+    <Content Include="Layouts\BannerSolution\Bootstrap\bootstrap.min.css" />
+    <Content Include="Layouts\BannerSolution\Bootstrap\bootstrap.min.js" />
+    <Content Include="Lists\Banner Assignment List\Elements.xml" />
+    <Content Include="Lists\Banner Description List\Elements.xml" />
+    <Content Include="MessageControl\Elements.xml" />
+    <Content Include="SiteColumns\Columns\Elements.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

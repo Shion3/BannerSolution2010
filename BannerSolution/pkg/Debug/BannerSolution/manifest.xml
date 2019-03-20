@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="17f48380-c12f-4ac2-a9a8-82a399f75434" SharePointProductVersion="14.0">
+  <Assemblies>
+    <Assembly Location="BannerSolution.dll" DeploymentTarget="GlobalAssemblyCache" />
+  </Assemblies>
+  <TemplateFiles>
+    <TemplateFile Location="Layouts\BannerSolution\JavaScript\jquery-3.3.1.min.js" />
+    <TemplateFile Location="Layouts\BannerSolution\SiteConfig.xml" />
+    <TemplateFile Location="Layouts\BannerSolution\Bootstrap\bootstrap.min.css" />
+    <TemplateFile Location="Layouts\BannerSolution\Bootstrap\bootstrap.min.js" />
+    <TemplateFile Location="ControlTemplates\BannerSolution\MessageControl.ascx" />
+  </TemplateFiles>
+  <FeatureManifests>
+    <FeatureManifest Location="BannerSolution_BannerSolutionFeature\Feature.xml" />
+  </FeatureManifests>
+</Solution>
