@@ -29,6 +29,19 @@
         right: -87px;
         bottom: 20px;
     }
+
+    .ACSBannerBlockContainer td.ACSProgressTitle {
+        line-height: normal;
+        padding: 0;
+        vertical-align: bottom;
+        border: 0px;
+    }
+
+        .ACSProgressTitle span {
+            font-size: 12px;
+            display: block;
+            width: 70%;
+        }
 </style>
 <div class="ACSBannerBlockContainer">
     <div style="width: 70%; margin: 0 auto; min-width: 740px; position: relative;">
@@ -41,8 +54,7 @@
         </table>
         <div class="ACSLastStatus"><%=LastStatus %></div>
         <div class="progress progress-striped active">
-            <div class="progress-bar" role="progressbar" aria-valuenow="<%=Percent %>"
-                aria-valuemin="0" aria-valuemax="100" style="background-color: <%=ProgressColor %>; width: <%=Percent %>%;">
+            <div class="progress-bar" role="progressbar" style="background-color: <%=ProgressColor %>; width: <%=Percent %>%;">
             </div>
         </div>
     </div>

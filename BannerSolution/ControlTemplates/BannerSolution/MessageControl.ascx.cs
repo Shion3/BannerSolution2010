@@ -86,17 +86,15 @@ namespace BannerSolution.ControlTemplates.BannerSolution
         private void RenderStatus(List<string> statusList)
         {
             StatusBlock = "";
-            var style = string.Format("line-height:normal;padding:0;vertical-align: bottom;width:{0}%;border:0px;", 100 / (statusList.Count - 1));
-            string spanStyle = "font-size:12px;display: block;width: 70%;";
+            var style = string.Format("width:{0}%;", 100 / (statusList.Count - 1));
             foreach (string str in statusList)
             {
                 if (statusList.IndexOf(str) == statusList.Count - 1)
                 {
-                    //spanStyle = "font-size:12px;display: block;width:50px;";
                     LastStatus = str;
                     break;
                 }
-                string stateBlock = string.Format("<td style='{0}'><span style='{1}'>{2}</span></td>", style, spanStyle, str);
+                string stateBlock = string.Format("<td class='ACSProgressTitle' style='{0}'><span>{1}</span></td>", style, str);
                 StatusBlock = StatusBlock + stateBlock;
             }
         }

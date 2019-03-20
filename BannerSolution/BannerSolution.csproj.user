@@ -3,6 +3,5 @@
   <PropertyGroup>
     <SharePointSiteUrl>http://alexji2010/sites/banner/</SharePointSiteUrl>
     <ProjectView>ProjectFiles</ProjectView>
-    <PublishToFileSystemTargetLocation>C:\Users\hshan\Documents</PublishToFileSystemTargetLocation>
   </PropertyGroup>
 </Project>
