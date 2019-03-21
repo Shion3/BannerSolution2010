@@ -37,8 +37,8 @@ namespace BannerSolution.Features.Feature1
                         {
                             if (web.ID == site.RootWeb.ID)
                             {
-                                DealWithDescriptionList(web);
-                                DealWithAssignmentList(web);
+                                //DealWithDescriptionList(web);
+                                //DealWithAssignmentList(web);
                             }
                             else
                             {

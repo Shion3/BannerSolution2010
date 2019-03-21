@@ -18,6 +18,10 @@ namespace BannerSolution.ControlTemplates.BannerSolution
 
         public string ProgressColor { get; set; }
         public string LastStatus { get; set; }
+        public string ShowDAndProgressBar { get; set; }
+
+        public string ProgressTitleColor { get; set; }
+        public string ProgressTitleFontFamily { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -38,6 +42,9 @@ namespace BannerSolution.ControlTemplates.BannerSolution
                                 SPList assignmentList = web.Lists[Constant.BannerAssignmentTitle];
 
                                 ProgressColor = root.SelectSingleNode("ProgressColor").Attributes[0].InnerText;
+                                ProgressTitleColor = root.SelectSingleNode("ProgressTitleColor").Attributes[0].InnerText;
+                                ProgressTitleFontFamily = root.SelectSingleNode("ProgressTitleFontFamily").Attributes[0].InnerText;
+
                                 string currentSite = SPContext.Current.Site.RootWeb.Url;
                                 List<string> statusList = GetStatusList(root, assignmentList, currentSite);
                                 SPQuery q = new SPQuery();
@@ -53,6 +60,14 @@ namespace BannerSolution.ControlTemplates.BannerSolution
                                 {
                                     Description = string.Empty;
                                     APPSLogger.Logger(Microsoft.SharePoint.Administration.TraceSeverity.Verbose, string.Format("Can't find item in {0}. Site url:{1}", Constant.BannerAssignmentTitle, currentSite));
+                                }
+                                if (string.IsNullOrEmpty(Description))
+                                {
+                                    ShowDAndProgressBar = "display:none";
+                                }
+                                else
+                                {
+                                    ShowDAndProgressBar = "display:block";
                                 }
                             }
                         }
@@ -116,7 +131,14 @@ namespace BannerSolution.ControlTemplates.BannerSolution
                     string arg1 = item[Constant.ACSArg1] != null ? item[Constant.ACSArg1].ToString() : string.Empty;
                     string arg2 = item[Constant.ACSArg2] != null ? item[Constant.ACSArg2].ToString() : string.Empty;
                     string arg3 = item[Constant.ACSArg3] != null ? item[Constant.ACSArg3].ToString() : string.Empty;
-                    string value = result[Constant.ACSText].ToString().Replace("[Arg1]", arg1).Replace("[Arg2]", arg2).Replace("[Arg3]", arg3);
+                    string arg4 = item[Constant.ACSArg4] != null ? item[Constant.ACSArg4].ToString() : string.Empty;
+                    string arg5 = item[Constant.ACSArg5] != null ? item[Constant.ACSArg5].ToString() : string.Empty;
+                    string arg6 = item[Constant.ACSArg6] != null ? item[Constant.ACSArg6].ToString() : string.Empty;
+                    string arg7 = item[Constant.ACSArg7] != null ? item[Constant.ACSArg7].ToString() : string.Empty;
+                    string arg8 = item[Constant.ACSArg8] != null ? item[Constant.ACSArg8].ToString() : string.Empty;
+                    string arg9 = item[Constant.ACSArg9] != null ? item[Constant.ACSArg9].ToString() : string.Empty;
+                    string value = result[Constant.ACSText].ToString().Replace("[Arg1]", arg1).Replace("[Arg2]", arg2).Replace("[Arg3]", arg3).Replace("[Arg4]", arg4).Replace("[Arg5]", arg5)
+                        .Replace("[Arg6]", arg6).Replace("[Arg7]", arg7).Replace("[Arg8]", arg8).Replace("[Arg9]", arg9);
                     return value;
                 }
                 else

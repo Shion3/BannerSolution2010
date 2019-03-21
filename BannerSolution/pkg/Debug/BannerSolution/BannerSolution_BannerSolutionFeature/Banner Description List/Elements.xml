@@ -1,10 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-  <ListInstance Title="Banner Description List"
-                OnQuickLaunch="TRUE"
-                TemplateType="100"
-                FeatureId="00bfea71-de22-43b2-a848-c05709900100"
-                Url="Lists/Banner Description List"
-                Description="My List Instance">
-  </ListInstance>
+    <!-- Do not change the value of the Name attribute below. If it does not match the folder name of the List project item, an error will occur when the project is run. -->
+    <ListTemplate
+        Name="Banner Description List"
+        Type="10000"
+        BaseType="0"
+        OnQuickLaunch="TRUE"
+        SecurityBits="11"
+        Sequence="410"
+        DisplayName="Banner Description List"
+        Description="My List Definition"
+        Image="/_layouts/images/itgen.png"/>
 </Elements>

@@ -6,8 +6,6 @@
   <TemplateFiles>
     <TemplateFile Location="Layouts\BannerSolution\JavaScript\jquery-3.3.1.min.js" />
     <TemplateFile Location="Layouts\BannerSolution\SiteConfig.xml" />
-    <TemplateFile Location="Layouts\BannerSolution\Bootstrap\bootstrap.min.css" />
-    <TemplateFile Location="Layouts\BannerSolution\Bootstrap\bootstrap.min.js" />
     <TemplateFile Location="ControlTemplates\BannerSolution\MessageControl.ascx" />
   </TemplateFiles>
   <FeatureManifests>

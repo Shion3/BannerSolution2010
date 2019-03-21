@@ -11,4 +11,6 @@
     <Value>Target go-live</Value>
   </Status>
   <ProgressColor Value="#F0A400" />
+  <ProgressTitleColor Value="#000" />
+  <ProgressTitleFontFamily Value="'Microsoft YaHei','SF Pro Display',Roboto,Noto,Arial,'PingFang SC',sans-serif" />
 </root>

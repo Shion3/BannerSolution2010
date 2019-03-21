@@ -7,47 +7,100 @@
 <%@ Register TagPrefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MessageControl.ascx.cs" Inherits="BannerSolution.ControlTemplates.BannerSolution.MessageControl" %>
 
-<link rel="stylesheet" href="/_layouts/BannerSolution/Bootstrap/bootstrap.min.css">
-<script src="/_layouts/BannerSolution/JavaScript/jquery-3.3.1.min.js" />
-<script src="/_layouts/BannerSolution/Bootstrap/bootstrap.min.js"></script>
+<script src="/_layouts/BannerSolution/JavaScript/jquery-3.3.1.min.js"></script>
 
 <style type="text/css">
-    html.ms-dialog body .ACSBannerBlockContainer {
+    html.ms-dialog body #ACSBannerBlockContainer {
         display: none;
     }
 
-    .ACSTableClass {
+    #ACSBannerBlockContainer .ACSTableClass {
         border: none;
         margin-bottom: 0;
     }
 
-    .ACSLastStatus {
+    #ACSBannerBlockContainer .ACSLastStatus {
         width: 87px;
         font-size: 12px;
         line-height: normal;
         position: absolute;
         right: -87px;
         bottom: 20px;
+        color: <%=ProgressTitleColor %>;
+        font-family:<%=ProgressTitleFontFamily %>
     }
 
-    .ACSBannerBlockContainer td.ACSProgressTitle {
+    #ACSBannerBlockContainer .ACSBannerBlockContainer td.ACSProgressTitle {
         line-height: normal;
         padding: 0;
         vertical-align: bottom;
         border: 0px;
     }
 
-        .ACSProgressTitle span {
+    #ACSBannerBlockContainer .ACSProgressTitle span {
+        font-size: 12px;
+        display: block;
+        width: 70%;
+    }
+
+    #ACSBannerBlockContainer .progress {
+        overflow: hidden;
+        height: 20px;
+        margin-bottom: 20px;
+        background-color: #f5f5f5;
+        border-radius: 4px;
+        box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+    }
+
+        #ACSBannerBlockContainer .progress-bar.active, #ACSBannerBlockContainer .progress.active .progress-bar {
+            -webkit-animation: progress-bar-stripes 2s linear infinite;
+            -o-animation: progress-bar-stripes 2s linear infinite;
+            animation: progress-bar-stripes 2s linear infinite;
+            float: left;
+            width: 0;
+            height: 100%;
             font-size: 12px;
-            display: block;
-            width: 70%;
+            line-height: 20px;
+            color: #fff;
+            text-align: center;
+            background-color: #337ab7;
+            -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+            box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+            -webkit-transition: width .6s ease;
+            -o-transition: width .6s ease;
+            transition: width .6s ease;
+            background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+            background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+            background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+            -webkit-background-size: 40px 40px;
+            background-size: 40px 40px;
         }
+
+    @-webkit-keyframes progress-bar-stripes {
+        from {
+            background-position: 40px 0;
+        }
+
+        to {
+            background-position: 0 0;
+        }
+    }
+
+    @keyframes progress-bar-stripes {
+        from {
+            background-position: 40px 0;
+        }
+
+        to {
+            background-position: 0 0;
+        }
+    }
 </style>
-<div class="ACSBannerBlockContainer">
+<div id="ACSBannerBlockContainer" style="<%=ShowDAndProgressBar %>">
     <div style="width: 70%; margin: 0 auto; min-width: 740px; position: relative;">
         <table class='table ACSTableClass'>
             <tbody>
-                <tr>
+                <tr style="color:<%=ProgressTitleColor %>;font-family:<%=ProgressTitleFontFamily %>">
                     <%=StatusBlock %>
                 </tr>
             </tbody>

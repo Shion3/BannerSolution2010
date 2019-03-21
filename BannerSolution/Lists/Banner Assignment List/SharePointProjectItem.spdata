@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ProjectItem Type="Microsoft.VisualStudio.SharePoint.ListInstance" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.ListDefinition" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
   <Files>
     <ProjectItemFile Source="Elements.xml" Target="Banner Assignment List\" Type="ElementManifest" />
+    <ProjectItemFile Source="Schema.xml" Target="Banner Assignment List\" Type="ElementFile" />
   </Files>
   <ExtensionData>
-    <ExtensionDataItem Key="DeploymentConflictResolutionBehavior" Value="Automatic" />
+    <ExtensionDataItem Key="Microsoft.VisualStudio.SharePoint.ListSettings.ListFieldsContentTypeID" Value="0x0100933c5e8b820d492ea44ac09f28ce9edf" />
   </ExtensionData>
 </ProjectItem>

@@ -75,11 +75,17 @@
     <None Include="Layouts\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{d156598e-cf53-450b-b4cb-3cc5c93aa33d}</SharePointProjectItemId>
     </None>
+    <None Include="Lists\Banner Assignment List\Banner Assignment List Instance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f9fc2ccb-f608-41b2-9084-6fbea10ed517}</SharePointProjectItemId>
+    </None>
     <None Include="Lists\Banner Assignment List\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{5feaa2ee-496c-4874-82b1-9f942c8ada60}</SharePointProjectItemId>
+      <SharePointProjectItemId>{e67aedd4-8002-4185-be2f-de6f775fc737}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\Banner Description List\Banner Description List Instance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{bc6fab23-ea8c-4882-b044-23a2c20f62c8}</SharePointProjectItemId>
     </None>
     <None Include="Lists\Banner Description List\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{891dd3d9-f204-4ba3-94a3-269c519452cc}</SharePointProjectItemId>
+      <SharePointProjectItemId>{aa6ba0c8-eaef-4d16-ac61-3111398472b6}</SharePointProjectItemId>
     </None>
     <None Include="MessageControl\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{a09162f9-eb48-4202-b2ec-a7f6dc7bf7ba}</SharePointProjectItemId>
@@ -90,9 +96,6 @@
     <None Include="Package\Package.Template.xml">
       <DependentUpon>Package.package</DependentUpon>
     </None>
-    <None Include="SiteColumns\Columns\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{25213970-3c48-473f-a449-6eba0e3870e9}</SharePointProjectItemId>
-    </None>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -102,12 +105,13 @@
     </Content>
     <Content Include="Layouts\BannerSolution\JavaScript\jquery-3.3.1.min.js" />
     <Content Include="Layouts\BannerSolution\SiteConfig.xml" />
-    <Content Include="Layouts\BannerSolution\Bootstrap\bootstrap.min.css" />
-    <Content Include="Layouts\BannerSolution\Bootstrap\bootstrap.min.js" />
+    <Content Include="Lists\Banner Assignment List\Banner Assignment List Instance\Elements.xml" />
     <Content Include="Lists\Banner Assignment List\Elements.xml" />
+    <Content Include="Lists\Banner Assignment List\Schema.xml" />
+    <Content Include="Lists\Banner Description List\Banner Description List Instance\Elements.xml" />
     <Content Include="Lists\Banner Description List\Elements.xml" />
+    <Content Include="Lists\Banner Description List\Schema.xml" />
     <Content Include="MessageControl\Elements.xml" />
-    <Content Include="SiteColumns\Columns\Elements.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
