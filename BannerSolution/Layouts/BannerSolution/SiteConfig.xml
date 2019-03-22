@@ -2,15 +2,17 @@
 <root>
   <Site Url="http://alexji2010/sites/banner"/>
   <Status>
-    <Value>Assessment</Value>
-    <Value>Full migration scheduled(T-4)</Value>
-    <Value>Full migration scheduled(T-1)</Value>
-    <Value>Full migration in progress</Value>
-    <Value>Last incremental scheduled</Value>
-    <Value>Last incremental in progress</Value>
-    <Value>Target go-live</Value>
+    <Value>○ Not started</Value>
+    <Value>○ Assessment in progress</Value>
+    <Value>○ Assessment completed</Value>
+    <Value>○ Full migration scheduled</Value>
+    <Value>○ Full migration will happen soon</Value>
+    <Value>○ Full migration in progress</Value>
+    <Value>○ Last incremental scheduled</Value>
+    <Value>○ Last incremental in progress</Value>
+    <Value>○ Target go-live</Value>
   </Status>
+  <EnableProgressBar Value="true" />
   <ProgressColor Value="#F0A400" />
-  <ProgressTitleColor Value="#000" />
-  <ProgressTitleFontFamily Value="'Microsoft YaHei','SF Pro Display',Roboto,Noto,Arial,'PingFang SC',sans-serif" />
+  <ProgressTitle Color="#000" FontFamily="'Microsoft YaHei','SF Pro Display',Roboto,Noto,Arial,'PingFang SC',sans-serif" FontSize="14px"/>
 </root>

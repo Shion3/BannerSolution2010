@@ -20,25 +20,25 @@
     }
 
     #ACSBannerBlockContainer .ACSLastStatus {
-        width: 87px;
-        font-size: 12px;
+        width: 150px;
+        font-size: <%=ProgressTitleFontSize %>;
         line-height: normal;
         position: absolute;
-        right: -87px;
-        bottom: 20px;
+        right: -150px;
+        bottom: 22px;
         color: <%=ProgressTitleColor %>;
-        font-family:<%=ProgressTitleFontFamily %>
+        font-family: <%=ProgressTitleFontFamily %>;
     }
 
-    #ACSBannerBlockContainer .ACSBannerBlockContainer td.ACSProgressTitle {
+    #ACSBannerBlockContainer td.ACSProgressTitle {
         line-height: normal;
-        padding: 0;
+        padding: 5px 0 0 0;
         vertical-align: bottom;
         border: 0px;
     }
 
     #ACSBannerBlockContainer .ACSProgressTitle span {
-        font-size: 12px;
+        font-size: <%=ProgressTitleFontSize %>;
         display: block;
         width: 70%;
     }
@@ -97,21 +97,21 @@
     }
 </style>
 <div id="ACSBannerBlockContainer" style="<%=ShowDAndProgressBar %>">
-    <div style="width: 70%; margin: 0 auto; min-width: 740px; position: relative;">
+    <div style="width: 70%; margin: 0 auto; min-width: 740px; position: relative; <%=EnableProgressBar %>">
         <table class='table ACSTableClass'>
             <tbody>
-                <tr style="color:<%=ProgressTitleColor %>;font-family:<%=ProgressTitleFontFamily %>">
+                <tr style="color: <%=ProgressTitleColor %>; font-family: <%=ProgressTitleFontFamily %>">
                     <%=StatusBlock %>
                 </tr>
             </tbody>
         </table>
-        <div class="ACSLastStatus"><%=LastStatus %></div>
+        <div class="ACSLastStatus">
+            <%=LastStatus %>
+        </div>
         <div class="progress progress-striped active">
             <div class="progress-bar" role="progressbar" style="background-color: <%=ProgressColor %>; width: <%=Percent %>%;">
             </div>
         </div>
     </div>
-    <div>
-        <%=Description %>
-    </div>
+    <div style="font-size: 16px; width: 70%; font-weight: bold; color: red; text-align: center; margin: 10px auto"><%=Description%></div>
 </div>

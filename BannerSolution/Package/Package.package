@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="17f48380-c12f-4ac2-a9a8-82a399f75434" solutionId="17f48380-c12f-4ac2-a9a8-82a399f75434" resetWebServer="false" name="BannerSolution" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="17f48380-c12f-4ac2-a9a8-82a399f75434" solutionId="17f48380-c12f-4ac2-a9a8-82a399f75434" resetWebServer="false" name="appssp2010bannersolution" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
   <features>
     <featureReference itemId="b04af89f-0252-431e-8cdc-f30365f9431e" />
   </features>

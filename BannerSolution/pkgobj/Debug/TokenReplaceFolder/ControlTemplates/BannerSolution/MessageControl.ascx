@@ -1,4 +1,4 @@
-﻿<%@ Assembly Name="BannerSolution, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a74ab03868ccbf9e" %>
+﻿<%@ Assembly Name="appssp2010bannersolution, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a74ab03868ccbf9e" %>
 <%@ Assembly Name="Microsoft.Web.CommandUI, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
 <%@ Register TagPrefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
 <%@ Register TagPrefix="Utilities" Namespace="Microsoft.SharePoint.Utilities" Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
@@ -20,25 +20,25 @@
     }
 
     #ACSBannerBlockContainer .ACSLastStatus {
-        width: 87px;
-        font-size: 12px;
+        width: 150px;
+        font-size: <%=ProgressTitleFontSize %>;
         line-height: normal;
         position: absolute;
-        right: -87px;
-        bottom: 20px;
+        right: -150px;
+        bottom: 22px;
         color: <%=ProgressTitleColor %>;
-        font-family:<%=ProgressTitleFontFamily %>
+        font-family: <%=ProgressTitleFontFamily %>;
     }
 
-    #ACSBannerBlockContainer .ACSBannerBlockContainer td.ACSProgressTitle {
+    #ACSBannerBlockContainer td.ACSProgressTitle {
         line-height: normal;
-        padding: 0;
+        padding: 5px 0 0 0;
         vertical-align: bottom;
         border: 0px;
     }
 
     #ACSBannerBlockContainer .ACSProgressTitle span {
-        font-size: 12px;
+        font-size: <%=ProgressTitleFontSize %>;
         display: block;
         width: 70%;
     }
@@ -97,21 +97,21 @@
     }
 </style>
 <div id="ACSBannerBlockContainer" style="<%=ShowDAndProgressBar %>">
-    <div style="width: 70%; margin: 0 auto; min-width: 740px; position: relative;">
+    <div style="width: 70%; margin: 0 auto; min-width: 740px; position: relative; <%=EnableProgressBar %>">
         <table class='table ACSTableClass'>
             <tbody>
-                <tr style="color:<%=ProgressTitleColor %>;font-family:<%=ProgressTitleFontFamily %>">
+                <tr style="color: <%=ProgressTitleColor %>; font-family: <%=ProgressTitleFontFamily %>">
                     <%=StatusBlock %>
                 </tr>
             </tbody>
         </table>
-        <div class="ACSLastStatus"><%=LastStatus %></div>
+        <div class="ACSLastStatus">
+            <%=LastStatus %>
+        </div>
         <div class="progress progress-striped active">
             <div class="progress-bar" role="progressbar" style="background-color: <%=ProgressColor %>; width: <%=Percent %>%;">
             </div>
         </div>
     </div>
-    <div>
-        <%=Description %>
-    </div>
+    <div style="font-size: 16px; width: 70%; font-weight: bold; color: red; text-align: center; margin: 10px auto"><%=Description%></div>
 </div>

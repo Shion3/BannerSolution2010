@@ -22,6 +22,8 @@ namespace BannerSolution.ControlTemplates.BannerSolution
 
         public string ProgressTitleColor { get; set; }
         public string ProgressTitleFontFamily { get; set; }
+        public string ProgressTitleFontSize { get; set; }
+        public string EnableProgressBar { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -41,9 +43,11 @@ namespace BannerSolution.ControlTemplates.BannerSolution
                                 SPList descriptionList = web.Lists[Constant.BannerDescriptionTitle];
                                 SPList assignmentList = web.Lists[Constant.BannerAssignmentTitle];
 
+                                EnableProgressBar = Convert.ToBoolean(root.SelectSingleNode("EnableProgressBar").Attributes[0].InnerText)?"display:block":"display:none;";
                                 ProgressColor = root.SelectSingleNode("ProgressColor").Attributes[0].InnerText;
-                                ProgressTitleColor = root.SelectSingleNode("ProgressTitleColor").Attributes[0].InnerText;
-                                ProgressTitleFontFamily = root.SelectSingleNode("ProgressTitleFontFamily").Attributes[0].InnerText;
+                                ProgressTitleColor = root.SelectSingleNode("ProgressTitle").Attributes["Color"].InnerText;
+                                ProgressTitleFontFamily = root.SelectSingleNode("ProgressTitle").Attributes["FontFamily"].InnerText;
+                                ProgressTitleFontSize = root.SelectSingleNode("ProgressTitle").Attributes["FontSize"].InnerText;
 
                                 string currentSite = SPContext.Current.Site.RootWeb.Url;
                                 List<string> statusList = GetStatusList(root, assignmentList, currentSite);

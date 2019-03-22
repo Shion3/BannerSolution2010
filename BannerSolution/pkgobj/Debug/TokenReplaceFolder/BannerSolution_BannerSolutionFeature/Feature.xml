@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Title="Banner solution for 2010" Id="98cf62f2-684d-4057-8128-d229c8fb0611" ReceiverAssembly="BannerSolution, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a74ab03868ccbf9e" ReceiverClass="BannerSolution.Features.Feature1.Feature1EventReceiver" Scope="Site">
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Title="appssp2010bannersolution" Id="98cf62f2-684d-4057-8128-d229c8fb0611" ReceiverAssembly="appssp2010bannersolution, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a74ab03868ccbf9e" ReceiverClass="BannerSolution.Features.Feature1.Feature1EventReceiver" Scope="Site">
   <ElementManifests>
     <ElementManifest Location="MessageControl\Elements.xml" />
     <ElementManifest Location="Banner Assignment List\Elements.xml" />
